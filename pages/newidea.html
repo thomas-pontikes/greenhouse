@@ -204,15 +204,18 @@
 
 
 
-
-
     </div>
 
     <!--PAGE CONTENTS-->
     <div id="page-wrapper">
-        <div class="container-fluid">
-
-                      <div class="row">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Create a New Mutual Fund</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <div class="container">
+            <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -220,7 +223,7 @@
                         </div>
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-lg-6">
+                            <div class="col-lg-12">
                                     <form role="form">
                                     <!-- NAME -->
                                         <div class="form-group">
@@ -285,19 +288,53 @@
                                             <label>Stocks to include</label>
                                             <p class="help-block">Currently a maximum of 10 stocks is supported</p>
 
-                                            <form method="POST">
-                                                <div id = "allocations">
-                                                    <div id="allocation">
-                                                        <input name="ticker[]" type="text" maxlength="10" id="tickerName"/><input name="percent[]" type="text" maxlength="10" id="percentage"/>
+                                            <form id="stock_form" method="POST">
+                                                        <div class="row" id="asset_list">
+                                                            <div class="col-lg-12 options">
+                                                        <div class="col-sm-6">
+                                                        Ticker: <input name="ticker" type="text" value="AAPL" maxlength="10"  style="text-transform:uppercase"/>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                        Precentage: <input name="percent" type="text" value="25%" maxlength="10" i/>
+                                                        </div>
+                                                            </div>
+
+                                                            <div class="col-lg-12 options">
+                                                                <div class="col-sm-6">
+                                                                    <input name="ticker" type="text" value="GOOGL" maxlength="10"  style="text-transform:uppercase"/>
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                    <input name="percent" type="text" value="25%" maxlength="10" />
+                                                                </div>
+                                                            </div>
+
+                                                <div class="col-lg-12 options">
+                                                    <div class="col-sm-6">
+                                                       <input name="ticker" type="text" value="AMZN" maxlength="10"  style="text-transform:uppercase"/>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <input name="percent" type="text" value="25%" maxlength="10" />
                                                     </div>
                                                 </div>
+                                                <div class="col-lg-12 options">
+                                                    <div class="col-sm-6">
+                                                        <input name="ticker" type="text" value="FB" maxlength="10"  style="text-transform:uppercase"/>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <input name="percent" type="text" value="25%" maxlength="10" />
+                                                    </div>
+                                                </div>
+                                        </div>
+
+
                                                 <br/>
-                                                <input type="button" value="Add another" onClick="addInput('allocation');")/>
+                                                <input type="button" value="Add Another" id="add">
                                              </form>
 
                                             <br>
                                         </div>
-                                        <button onclick="myFunction()">Create Portfolio </button>
+
+                                        <button id="create">Create Portfolio </button>
                                         <p id="stockinfo"></p>
                                         <canvas id="piechart"></canvas>
 
@@ -305,24 +342,15 @@
                                         <button type="submit" class="btn btn-default">Submit Button</button>
                                         <button type="reset" class="btn btn-default">Reset Button</button>
 
-                                    
-                                </div>
-                                <!-- /.col-lg-6 (nested) -->
                             </div>
-                            <!-- /.row (nested) -->
                         </div>
-                        <!-- /.panel-body -->
                     </div>
-                    <!-- /.panel -->
                 </div>
-                <!-- /.col-lg-12 -->
             </div>
-            <!-- /.row -->
-
-
-
         </div>
     </div>
+    </div>
+
 
 
 
@@ -339,6 +367,8 @@
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
     <script src="../dist/js/sb-admin-2.js"></script>
+    <script src="../dist/js/logic.js"></script>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.0/js/mdb.min.js"></script>
 

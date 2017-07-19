@@ -27,6 +27,7 @@
    </head>
    <body>
       <div id="wrapper">
+      <p style="text-align:left;"><img src="Fid_Logo_Color_webfriendly.gif" width="20%" /></p>
          <!-- Navigation -->
          <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
@@ -235,7 +236,7 @@
                                           <a href="/stock/EA-R:SET/">Energy Absolute PCL (EA-R:SET)</a>
                                        </td>
                                        <td style="text-align: left; " data-th="Weighting" class="highlight-column">
-                                          9.24%
+                                          13.33%
                                        </td>
                                     </tr>
                                     <tr data-index="1">
@@ -243,7 +244,7 @@
                                           <a href="/stock/FSLR/">First Solar Inc (FSLR)</a>
                                        </td>
                                        <td style="text-align: left; " data-th="Weighting" class="highlight-column">
-                                          8.34%
+                                          33.33%
                                        </td>
                                     </tr>
                                     <tr data-index="2">
@@ -259,7 +260,7 @@
                                           <a href="/stock/968:HKG/">Xinyi Solar Holdings Ltd (968:HKG)</a>
                                        </td>
                                        <td style="text-align: left; " data-th="Weighting" class="highlight-column">
-                                          6.09%
+                                          20.00%
                                        </td>
                                     </tr>
                                     <tr data-index="4">
@@ -267,7 +268,7 @@
                                           <a href="/stock/ABY/">Atlantica Yield PLC (ABY)</a>
                                        </td>
                                        <td style="text-align: left; " data-th="Weighting" class="highlight-column">
-                                          5.80%
+                                          6.67%
                                        </td>
                                     </tr>
                                     <tr data-index="5">
@@ -279,29 +280,36 @@
                            <div class="col-lg-5">
                               <h4>Asset Allocation:</h4>
                               <div class="row">
-                                 <canvas id="asset-allocation"></canvas>
+                                 <canvas id="asset-allocation3"></canvas>
                               </div>
                            </div>
                         
                         <div class="col-lg-7">
-                            <b>Description: </b> This fund seeks long term captial growth and consists of companies that provide clean, renewable, and sustainable sources of energy.
+                            <b>Description: </b> This fund seeks long term capital growth and consists of companies that provide clean, renewable, and sustainable sources of energy.
                         </div>
                         </div>
                         <div class="panel-footer">
                            <div class="row">
                               <div class="col-lg-6">
-                                 Created by <a href="/">@tapontikes</a>
+                                 Created by <a href="/">@johnsmith</a>
+                                <!-- <br><br>
+                                 <button type="reset" class="btn btn-default">Comment</button> -->
                               </div>
                               <div class="col-lg-6">
+                                 <span class="pull-left">
+                                 <button type="reset" class="btn btn-default">Comment</button> 
+                                 </span>
+
                                  <span class="pull-right">
-                                 <button class="social-like" onclick="clickCounterLike()">
+                                 <br>
+                                 <button class="social-like" id="likeButton" onclick="clickCounterLike()">
                                  <span class="like"><i class="glyphicon glyphicon-thumbs-up"></i></span>
-                                 <span id="like-count" class="count" >32,456</span>
+                                 <span id="like-count" class="count" >3456</span>
                                  </button>
                                  &nbsp;
-                                 <button class="social-dislike" >
-                                 <span class="dislike" >200</span>
-                                 <span id = "dislike-count" class="like"><i class="glyphicon glyphicon-thumbs-down"></i></span>
+                                 <button class="social-dislike" onclick="clickCounterDislike()">
+                                 <span class="dislike" id = "dislike-count">200</span>
+                                 <span  class="like"><i class="glyphicon glyphicon-thumbs-down"></i></span>
                                  </button>
                                  </span>
                               </div>
@@ -358,7 +366,7 @@
                                           <a href="/stock/EA-R:SET/">Energy Absolute PCL (EA-R:SET)</a>
                                        </td>
                                        <td style="text-align: left; " data-th="Weighting" class="highlight-column">
-                                          9.24%
+                                          13.33%
                                        </td>
                                     </tr>
                                     <tr data-index="1">
@@ -366,7 +374,7 @@
                                           <a href="/stock/FSLR/">First Solar Inc (FSLR)</a>
                                        </td>
                                        <td style="text-align: left; " data-th="Weighting" class="highlight-column">
-                                          8.34%
+                                          33.33%
                                        </td>
                                     </tr>
                                     <tr data-index="2">
@@ -374,7 +382,7 @@
                                           <a href="/stock/3800:HKG/">GCL-Poly Energy Holdings Ltd (3800:HKG)</a>
                                        </td>
                                        <td style="text-align: left; " data-th="Weighting" class="highlight-column">
-                                          6.38%
+                                          26.67%
                                        </td>
                                     </tr>
                                     <tr data-index="3">
@@ -382,7 +390,7 @@
                                           <a href="/stock/968:HKG/">Xinyi Solar Holdings Ltd (968:HKG)</a>
                                        </td>
                                        <td style="text-align: left; " data-th="Weighting" class="highlight-column">
-                                          6.09%
+                                          20.00%
                                        </td>
                                     </tr>
                                     <tr data-index="4">
@@ -390,7 +398,7 @@
                                           <a href="/stock/ABY/">Atlantica Yield PLC (ABY)</a>
                                        </td>
                                        <td style="text-align: left; " data-th="Weighting" class="highlight-column">
-                                          5.80%
+                                          6.67%
                                        </td>
                                     </tr>
                                     <tr data-index="5">
@@ -409,13 +417,17 @@
                         <div class="panel-footer">
                            <div class="row">
                               <div class="col-lg-6">
-                                 Created by <a href="/">@tapontikes</a>
+                                 Created by <a href="/">@johnsmith</a>
                               </div>
                               <div class="col-lg-6">
+                                 <span class="pull-left">
+                                 <button type="reset" class="btn btn-default">Comment</button> 
+                                 </span>
                                  <span class="pull-right">
+                                 <br>
                                  <button class="social-like" onclick="clickCounterLike()">
                                  <span class="like"><i class="glyphicon glyphicon-thumbs-up"></i></span>
-                                 <span id="like-count" class="count" >10,500</span>
+                                 <span id="like-count" class="count" >1500</span>
                                  </button>
                                  &nbsp;
                                  <button class="social-dislike" >

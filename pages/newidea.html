@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Trending Ideas</title>
+    <title>New Idea</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -40,7 +40,7 @@
 
 
     <div id="wrapper">
-
+        <p style="text-align:left;"><img src="Fid_Logo_Color_webfriendly.gif" width="20%" /></p>
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
@@ -53,7 +53,6 @@
                 <a class="navbar-brand" href="index.html">What kind of mutual fund would you like us to create for you?</a>
             </div>
             <!-- /.navbar-header -->
-
             <!-- NEW IDEA BUTTON -->
             <ul class="nav navbar-top-links navbar-right">
 
@@ -229,14 +228,14 @@
                                         <div class="form-group">
                                             <label>Name</label>
                                             <p class="help-block">Keep it short and descriptive.</p>
-                                            <input class="form-control">
+                                            <input class="form-control" value="Sample Mutual Fund Idea">
                                             
                                         </div>
                                     <!-- DETAIL -->
                                         <div class="form-group">
                                             <label>Description</label>
                                             <p class="help-block">Elaborate a little on your idea.</p>
-                                            <textarea class="form-control" rows="3"></textarea>
+                                            <textarea class="form-control" rows="3" value="For demonstration purposes">For demonstration purposes</textarea>
                                         </div>
                                     <!-- ASSET CLASS -->
                                         <div class="form-group">
@@ -267,18 +266,18 @@
                                         <div class="form-group">
                                             <label>Purpose</label>
                                             <p class="help-block">Why do you want to see this?</p>
-                                            <input class="form-control">
+                                            <input class="form-control" value="There's nothing in the market like it">
                                     <!-- INVESTMENT PURPOSE -->
                                         <div class="form-group">
                                             <label>Benefits</label>
                                             <p class="help-block">Why is this a good idea?</p>
-                                            <textarea class="form-control" rows="3"></textarea>         
+                                            <textarea class="form-control" rows="3" value="Because it would have high returns and is diversified">Because it would have high returns and is diversified.</textarea>         
                                         </div>
                                     <!-- RISKS -->
                                         <div class="form-group">
                                             <label>Risks</label>
                                             <p class="help-block">Do you know of any risks related to your idea?</p>
-                                            <textarea class="form-control" rows="3"></textarea>         
+                                            <textarea class="form-control" rows="3">I'm not sure</textarea>         
                                         </div>
                                         </div>
                                         </form>
@@ -286,7 +285,7 @@
                                     <!-- ALLOCATION -->
                                         <div class="form-group">
                                             <label>Stocks to include</label>
-                                            <p class="help-block">Currently a maximum of 10 stocks is supported</p>
+                                            <p class="help-block">You may choose up to 50 financial products to include</p>
 
                                             <form id="stock_form" method="POST">
                                                         <div class="row" id="asset_list">
@@ -295,7 +294,7 @@
                                                         Ticker: <input name="ticker" type="text" value="AAPL" maxlength="10"  style="text-transform:uppercase"/>
                                                         </div>
                                                         <div class="col-sm-6">
-                                                        Precentage: <input name="percent" type="text" value="25%" maxlength="10" i/>
+                                                        Precentage: <input name="percent" type="text" value="35%" maxlength="10" i/>
                                                         </div>
                                                             </div>
 
@@ -304,7 +303,7 @@
                                                                     <input name="ticker" type="text" value="GOOGL" maxlength="10"  style="text-transform:uppercase"/>
                                                                 </div>
                                                                 <div class="col-sm-6">
-                                                                    <input name="percent" type="text" value="25%" maxlength="10" />
+                                                                    <input name="percent" type="text" value="15%" maxlength="10" />
                                                                 </div>
                                                             </div>
 
@@ -328,19 +327,19 @@
 
 
                                                 <br/>
-                                                <input type="button" value="Add Another" id="add">
+                                               <button type="button" class="btn btn-outline btn-default" id="add">Add Another</button>
                                              </form>
 
                                             <br>
                                         </div>
 
-                                        <button id="create">Create Portfolio </button>
+                                        <!--<button id="create">Create Portfolio </button>
                                         <p id="stockinfo"></p>
-                                        <canvas id="piechart"></canvas>
+                                        <canvas id="piechart"></canvas>-->
 
                                         <!-- SUBMIT AND RESET BUTTONS -->
-                                        <button type="submit" class="btn btn-default">Submit Button</button>
-                                        <button type="reset" class="btn btn-default">Reset Button</button>
+                                        <a type="submit" class="btn btn-default" href="newindex.html">Submit</a>
+                                        <button type="reset" class="btn btn-default">Reset</button>
 
                             </div>
                         </div>

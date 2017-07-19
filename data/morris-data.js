@@ -9,43 +9,94 @@ $(function () {
 
     };
 
-    var data = [
+    var data1 = [
         {
-            value: 20,
+            value: 13.333,
             color:"#F7464A",
             highlight: "#FF5A5E",
-            label: "Red"
+            label: "Energy Absolute PCL (EA-R:SET)"
         },
         {
-            value: 50,
+            value: 33.33,
             color: "#46BFBD",
             highlight: "#5AD3D1",
-            label: "Green"
+            label: "First Solar Inc (FSLR)"
         },
         {
-            value: 40,
+            value: 26.67,
             color: "#FDB45C",
             highlight: "#FFC870",
-            label: "Yellow"
+            label: "GCL-Poly Energy Holdings Ltd (3800:HKG)"
         },
          {
-            value: 30,
+            value: 20,
             color: "#bc42f4",
             highlight: "#FFC870",
-            label: "Yellow"
+            label: "Xinyi Solar Holdings Ltd (968:HKG) "
         },
          {
-            value: 10,
+            value: 6.67,
             color: "#4286f4",
             highlight: "#FFC870",
-            label: "Yellow"
+            label: "Atlantica Yield PLC (ABY) "
         }
     ];
 
-    var ctx = document.getElementById("asset-allocation").getContext('2d');
+        var data2 = [
+        {
+            value: 35,
+            color:"#F7464A",
+            highlight: "#FF5A5E",
+            label: "AAPL"
+        },
+        {
+            value: 15,
+            color: "#46BFBD",
+            highlight: "#5AD3D1",
+            label: "GOOG"
+        },
+        {
+            value: 25,
+            color: "#FDB45C",
+            highlight: "#FFC870",
+            label: "AMZN"
+        },
+         {
+            value: 25,
+            color: "#bc42f4",
+            highlight: "#FFC870",
+            label: "FB"
+        }
+    ];
+    try {
+        var ctx = document.getElementById("asset-allocation").getContext('2d');
+        var myPieChart = new Chart(ctx).Pie(data2,option);
+    } catch(err) {
+
+    }
+
+    try {
+        var ctx = document.getElementById("asset-allocation3").getContext('2d');
+        var myPieChart = new Chart(ctx).Pie(data1,option);
+    } catch(err) {
+        
+    }
+
     var ctx2 = document.getElementById("asset-allocation2").getContext('2d');
-    var myPieChart = new Chart(ctx).Pie(data,option);
-    var myPieChart2 = new Chart(ctx2).Pie(data,option);
+    var myPieChart2 = new Chart(ctx2).Pie(data1,option);
 
 
 });
+
+
+
+function clickCounterLike() {
+    var currValue = document.getElementById("like-count").innerHTML;
+    document.getElementById("like-count").innerHTML = parseInt(currValue)+1;
+}
+
+function clickCounterDislike() {
+    var currValue = document.getElementById("dislike-count").innerHTML;
+    
+    document.getElementById("dislike-count").innerHTML = parseInt(currValue)+1;
+}
